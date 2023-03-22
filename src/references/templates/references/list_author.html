@@ -16,6 +16,8 @@
             <thead>
                 <tr>
                   <th scope="col">Authors data</th>
+                  <th scope="col">Related books</th>
+                  <th scope="col">Description</th>
                   <th scope="col">Options</th>
                 </tr>
               </thead>
@@ -23,6 +25,13 @@
         {% for obj in object_list %}
         <tr>
             <td>{{ obj.name }} {{ obj.surname }}</td>
+            <td>
+              {% for book in obj.book_set.all %}
+              {{ book.name }}
+              {% if not forloop.last %}, {% endif %}
+              {% endfor %}
+            </td>
+            <td>{{ obj.description }}</td>
             <td><a href="{% url 'references:author_update' pk=obj.pk %}" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
                 <a href="{% url 'references:author_delete' pk=obj.pk %}" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#id{{obj.pk}}"><i class="bi bi-x-lg"></i></a></td>
         </tr>

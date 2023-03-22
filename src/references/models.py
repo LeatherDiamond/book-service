@@ -16,7 +16,7 @@ class BookAuthor(models.Model):
         blank=True,
         null=True
     )
-
+      
     def get_absolute_url(self):
         return reverse_lazy('references:author_detail', kwargs={'pk': self.pk})
 
