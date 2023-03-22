@@ -20,12 +20,6 @@ class Book(models.Model):
     author = models.ManyToManyField(
         BookAuthor,
     )
-    price = models.DecimalField(
-        max_digits=5, 
-        decimal_places=2,
-        verbose_name="Price",
-        help_text="Currency in BYN"
-    )
     publishing_year=models.CharField(
         max_length=11,
         verbose_name="Publishing year"
@@ -51,9 +45,6 @@ class Book(models.Model):
     )
     age_restriction = models.IntegerField( 
         verbose_name="Age restriction"
-    )
-    available_books = models.IntegerField(
-        verbose_name="Available books"
     )
     date_of_addition = models.DateField(
         verbose_name="Date of addition"
