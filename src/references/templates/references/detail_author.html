@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+Author's preview
+{% endblock title %}
+
+{% block content %}
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <div class="text-center">
+        <h1><span style="color: green;">Author successfully created!</span></h1>
+    </div>
+    </div>
+    Author's data: <b>"{{ object.name }} {{object.surname}}"</b><br>
+    Description: {{ object.description|default:"No description was provided" }}<br>
+    <br>
+    <td><a href="{% url 'references:author_create' %}" class="btn btn-outline-success mb-3">Create a new author</a></td>
+    <br>
+    <td><a href="{% url 'references:authors_list' %}" class="btn btn-outline-success mb-3">Show the list of authors</a></td>
+{% endblock content %}
