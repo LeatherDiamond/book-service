@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from product_card.views import SearchResultView
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('references/', include('references.urls', namespace="references")),
     path('product_card/', include('product_card.urls', namespace="product_card")),
+    path('search/', SearchResultView.as_view(), name='search_results'),
 ]
 
 if settings.DEBUG:

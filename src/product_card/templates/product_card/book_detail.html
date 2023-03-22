@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ object.name }}
+{% endblock title %}
+
+{% block content %}
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <div class="text-center">
+        <h2>{{ book.name }}</h2>
+    </div>
+</div>
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">{{ book.name }}</h2><br>
+        <h4 class="featurette-heading fw-normal lh-1" >Author:<span class="text-muted"><em> {% for author in book.author.all %}{{ author }} {% if not forloop.last %}, {% endif %} {% endfor %}</h4></em>
+        <h4 class="featurette-heading fw-normal lh-1" >Pages:<span class="text-muted"><em> {{ book.pages }}</h4></em>
+        <h4 class="featurette-heading fw-normal lh-1" >Binding:<span class="text-muted"><em> {{ book.binding }}</h4></em>
+        <h4 class="featurette-heading fw-normal lh-1" >Format:<span class="text-muted"><em> {{ book.format }}</h4></em>
+        <h4 class="featurette-heading fw-normal lh-1" >ISBN:<span class="text-muted"><em> {{ book.isbn }}</h4></em>
+        <h4 class="featurette-heading fw-normal lh-1" >Weight:<span class="text-muted"><em> {{ book.weight }} gr</h4></em>
+        <h4 class="featurette-heading fw-normal lh-1" >Publishing year:<span class="text-muted"><em> {{ book.publishing_year }}</h4></em>
+        <h4 class="featurette-heading fw-normal lh-1" >Age restriction:<span class="text-muted"><em> {{ book.age_restriction }}</h4></em>
+       
+        <br>
+        <h5 class="featurette-heading fw-normal lh-1" ><span class="text-muted"> {{ book.description }}</h5>
+      </div>
+      <div class="col-md-5 order-md-1">
+ 
+        <img src="{% if book.image %}{{ book.image.url }}{% else %}''{% endif %}" alt="Default image" width="500" height="500" border="1" >
+
+      </div>
+    </div>
+    <h6 class="featurette-heading fw-normal lh-1" >Changed:<span class="text-muted"><em> {{ book.modification_date }}</h6></em><br>
+    <hr>
+  </div>
+{% endblock content %}
+
