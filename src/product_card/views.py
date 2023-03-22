@@ -84,3 +84,21 @@ class BookDetail(generic.DetailView):
         return render(request, 'product_card/book_detail.html', context={
             'book': book,
         }) 
+    
+
+class CatalogView(generic.View):
+
+    def get(self, request, *args, **kwargs):
+        book = models.Book.objects.all()
+        paginator = Paginator(book, 12)
+
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+
+        return render(
+            request,
+            'product_card/catalog.html',
+            context={
+                'page_obj': page_obj
+            }
+        )
