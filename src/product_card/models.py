@@ -28,7 +28,7 @@ class Book(models.Model):
         verbose_name="Pages"
     )
     binding = models.CharField(
-        max_length=30,
+        max_length=15,
         verbose_name="Binding"
     )
     format = models.CharField(

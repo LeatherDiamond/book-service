@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+Book preview
+{% endblock title %}
+
+{% block content %}
+<div class="shadow p-3 mb-5 bg-body rounded">
+<div class="text-center">
+    <h1><span style="color: green;">Book successfully created!</span></h1>
+</div>
+</div>
+    Card name: <b>"{{ object.name }}"</b><br>
+    <br>
+    <td><a href="{% url 'product_card:pc_create' %}" class="btn btn-outline-success mb-3">Create a new book</a></td>
+    <br>
+    <td><a href="{% url 'product_card:pc_list' %}" class="btn btn-outline-success mb-3">Show the list of books</a></td>
+{% endblock content %}
