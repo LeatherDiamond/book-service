@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Service navigation
+{% endblock title %}
+
+{% block content %}
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <div class="text-center">
+        <h2>Welcome to navigation panel!</h2>
+    </div>
+</div>
+
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <i class="bi bi-1-circle"> <strong>List of authors.</strong></i> 
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            Here you can see the list of authors and update/create/delete aouthor incstance.<br>
+            <strong>Click the button to start.</strong><br>
+            <br>
+            <a href="{%url 'references:authors_list'%}" class="btn btn-outline-success mb-3">Show the list of authors</a>
+          </div>
+      </div>
+    </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+    <i class="bi bi-2-circle"> <strong>List of books.</strong></i>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          Find the list of books after clicking the button. You also can update/create/delete book instance in a few steps after clicking the button.<br>
+          <strong>Click the button to start.</strong><br>
+          <br>
+          <a href="{%url 'product_card:pc_list'%}" class="btn btn-outline-success mb-3">Show the list of books</a>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+    <i class="bi bi-3-circle"> <strong>New book.</strong></i>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          Create a new book directly.<br>
+          <strong>Just click the button to start.</strong><br>
+          <br>
+          <a href="{%url 'product_card:pc_create'%}" class="btn btn-outline-success mb-3">Create a new author</a>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+    <i class="bi bi-4-circle"> <strong>New author.</strong></i>
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          Create a new author directly.<br>
+          <strong>Just click the button to start.</strong><br>
+          <br>
+          <a href="{%url 'references:author_create'%}" class="btn btn-outline-success mb-3">Create a new author</a>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

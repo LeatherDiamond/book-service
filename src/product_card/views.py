@@ -102,3 +102,11 @@ class CatalogView(generic.View):
                 'page_obj': page_obj
             }
         )
+    
+
+class PortalView(generic.TemplateView):
+
+    def get(self, request, *args, **kwargs):
+        return render(
+            request, 'product_card/portal_detail.html'
+        )

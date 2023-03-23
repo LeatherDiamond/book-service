@@ -9,4 +9,5 @@ urlpatterns = [
     path('pc_delete/<int:pk>/', views.DeleteProductCard.as_view(), name='pc_delete'),
     path('pc_list/', views.ShowProductCardList.as_view(), name='pc_list'),
     path('book/<int:pk>/', views.BookDetail.as_view(), name='book_detail'),
+    path('navigation/', views.PortalView.as_view(), name='service_navigation')
 ]
