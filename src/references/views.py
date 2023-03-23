@@ -9,22 +9,16 @@ from django.urls import reverse_lazy
 #CBV for Author model.
 
 class ShowAuthors(generic.ListView):
-    login_url = 'home_page:login'
-    permission_required = 'references.view_bookauthor'
     model = models.BookAuthor
     template_name = 'references/list_author.html'
 
 
 class ShowAuthor(generic.DetailView):
     model = models.BookAuthor
-    login_url = 'home_page:login'
-    permission_required = 'references.view_bookauthor'
     template_name = 'references/detail_author.html'
 
 
 class CreateAuthor(generic.CreateView):
-    login_url = 'home_page:login'
-    permission_required = 'references.add_bookauthor'
     model = models.BookAuthor
     form_class = forms.AuthorForm
     template_name = 'references/edit_author.html'
@@ -36,8 +30,6 @@ class CreateAuthor(generic.CreateView):
 
 
 class UpdateAuthor(generic.UpdateView):
-    login_url = 'home_page:login'
-    permission_required = 'references.change_bookauthor'
     model = models.BookAuthor
     form_class = forms.AuthorForm
     template_name = 'references/edit_author.html'
@@ -49,8 +41,6 @@ class UpdateAuthor(generic.UpdateView):
 
 
 class DeleteAuthor(generic.DeleteView):
-    login_url = 'home_page:login'
-    permission_required = 'references.delete_bookauthor'
     model = models.BookAuthor
     template_name = 'references/delete_author.html'
 

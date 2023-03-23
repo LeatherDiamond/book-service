@@ -8,22 +8,16 @@ from django.db.models import Q
 # Create your views here.
 
 class ShowProductCardList(generic.ListView):
-    login_url = 'home_page:login'
-    permission_required = 'product_card.view_book'
     model = models.Book
     template_name = 'product_card/list_pc.html'
 
 
 class ShowProductCard(generic.DetailView):
-    login_url = 'home_page:login'
-    permission_required = 'product_card.view_book'
     model = models.Book
     template_name = 'product_card/detail_pc.html'
 
 
 class CreateProductCard(generic.CreateView):
-    login_url = 'home_page:login'
-    permission_required = 'product_card.add_book'
     model = models.Book
     form_class = forms.ProductCardForm
     template_name = 'product_card/edit_pc.html'
@@ -35,8 +29,6 @@ class CreateProductCard(generic.CreateView):
 
 
 class UpdateProductCard(generic.UpdateView):
-    login_url = 'home_page:login'
-    permission_required = 'product_card.change_book'
     model = models.Book
     form_class = forms.ProductCardForm
     template_name = 'product_card/edit_pc.html'
@@ -48,8 +40,6 @@ class UpdateProductCard(generic.UpdateView):
 
 
 class DeleteProductCard(generic.DeleteView):
-    login_url = 'home_page:login'
-    permission_required = 'product_card.delete_book'
     model = models.Book
     template_name = 'product_card/delete_pc.html'
 
@@ -75,26 +65,19 @@ class SearchResultView(generic.View):
         })
 
 class BookDetail(generic.DetailView):
-
-
     def get(self, request, *args, **kwargs):
         book = get_object_or_404(models.Book, pk=kwargs['pk'])
-        last_posts = models.Book.objects.all().order_by('-id')[:3]
-
         return render(request, 'product_card/book_detail.html', context={
             'book': book,
         }) 
     
 
 class CatalogView(generic.View):
-
     def get(self, request, *args, **kwargs):
         book = models.Book.objects.all()
         paginator = Paginator(book, 12)
-
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
-
         return render(
             request,
             'product_card/catalog.html',
@@ -105,7 +88,6 @@ class CatalogView(generic.View):
     
 
 class PortalView(generic.TemplateView):
-
     def get(self, request, *args, **kwargs):
         return render(
             request, 'product_card/portal_detail.html'
