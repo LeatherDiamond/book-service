@@ -135,4 +135,4 @@ python manage.py runserver
 
 # License
 
-***This project is licensed under the MIT License - see the [LICENSE](https://github.com/LeatherDiamond/Django_bookstore/blob/master/LICENCE) file for details.***
+***This project is licensed under the MIT License - see the [LICENSE](https://github.com/LeatherDiamond/book_service/blob/master/LICENCE) file for details.***
