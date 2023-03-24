@@ -2,12 +2,12 @@
  
 * ***[Project description](#project-description)***
 * ***[Detailed functionality description](#detailed-functionality-description)***
-  * ***[Book instance](#book-instance)***
-  * ***[Author instance](#author-instance)***
-  * ***[Product Search](#product-search)***
-  * ***[Built-in administrative portal](#built-in-administrative-portal)***
-  * ***[Home page](#home-page)***
-  * ***[Directory](#directory)***
+  * ***[Book instance](#1-book-instance)***
+  * ***[Author instance](#2-author-instance)***
+  * ***[Product Search](#3-product-search)***
+  * ***[Built-in administrative portal](#4-built-in-administrative-portal)***
+  * ***[Home page](#5-home-page)***
+  * ***[Directory](#6-directory)***
 * ***[How to start?](#how-to-start)***
   * ***[Note](#note)***
 * ***[License](#license)***
@@ -99,7 +99,9 @@ pip install -r requirements.txt
  - [x] settings.py:
    ***Django SECRET_KEY;***
     
-    > **NOTE**: To launch the project correct without any import errors *SECRET KEY* can be provided in two ways:
+    > ###### NOTE: 
+    >
+    > To launch the project correct without any import errors *SECRET KEY* can be provided in two ways:
     >  * ***1. You can create ".env" file at "proj" directory and put the key in standart format here. No more changes are required.***
     >  ```
     >  SECRET_KEY='your_secret_key'
