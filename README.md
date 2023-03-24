@@ -19,9 +19,9 @@ This project is a compact web service that enables users to manage authors and b
 With its intuitive interface, users can easily add, remove, and modify authors and books on-the-go. 
 Users can quickly search for titles by entering relevant keywords. 
 The service is highly flexible, allowing users to customize it to their specific requirements.  
-Furthermore, this Python project is equipped with a continuous integration pipeline that automatically launches tests every time new code is pushed to the Github repository.
+Furthermore, this  project is equipped with a continuous integration pipeline that automatically launches tests every time new code is pushed to the Github repository.
 This ensures the codebase remains error-free and runs smoothly, without any glitches or bugs.
-The project also has in-built tsts that help catch bugs early on. 
+The project also has in-built tets that help catch bugs early on. 
 These tests are written using standard libraries and are easy to run, debug and maintain. 
 This project allows uers to focus on developing new features and enhancing their book collection management experience.
 
@@ -90,7 +90,7 @@ python -m venv environment_name
 .\env\Scripts\activate
 ```
 
-**3 Install all requirements from "requirements.txt".**
+**3. Install all requirements from "requirements.txt".**
 ```
 pip install -r requirements.txt
 ```
@@ -106,7 +106,7 @@ pip install -r requirements.txt
     >  ```
     >  SECRET_KEY='your_secret_key'
     >  ```
-    >  * ***2.The key can be provided in "settings.py" file directly in field "SECRET_KEY" but unused imports should be removed:***
+    >  * ***2. The key can be provided in "settings.py" file directly in field "SECRET_KEY" but unused imports should be removed:***
     >
     >
     >~~***import*** os~~
@@ -129,6 +129,11 @@ python manage.py createsuperuser
 **7. Launch the project on a development server to see all the functionality.**
 ```
 python manage.py runserver
+```
+
+**8 *. To run in-built tests use the following command ***(tests are located in module "product_card" in "tests.py" file)***:**
+```
+python manage.py test
 ```
 
 
