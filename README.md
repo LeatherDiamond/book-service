@@ -19,13 +19,19 @@ This project is a compact web service that enables users to manage authors and b
 With its intuitive interface, users can easily add, remove, and modify authors and books on-the-go. 
 Users can quickly search for titles by entering relevant keywords. 
 The service is highly flexible, allowing users to customize it to their specific requirements.  
-Furthermore, this  project is equipped with a continuous integration pipeline that automatically launches tests every time new code is pushed to the Github repository.
+Furthermore, this  project is equipped with a continuous integration pipeline that automatically builds the project image and launches tests every time new code is pushed to the Github repository.
 This ensures the codebase remains error-free and runs smoothly, without any glitches or bugs.
 The project also has in-built tets that help catch bugs early on. 
 These tests are written using standard libraries and are easy to run, debug and maintain. 
 This project allows uers to focus on developing new features and enhancing their book collection management experience.
 
-***Applied technologies:*** *Python, SQLite, Django, Bootstrap, Docker, GitHub Actions*
+***Applied technologies:*** 
+- Python(>=3.9.7), 
+- SQLite, 
+- Django(>=4.1.7), 
+- Bootstrap (>=5.0.2), 
+- Docker (docker engine >=20.10.23 ), 
+- GitHub Actions (checkout >=v2)
 
 # Detailed functionality description
    
