@@ -10,9 +10,9 @@ Book preview
     <h1><span style="color: green;">Book successfully created!</span></h1>
 </div>
 </div>
-    Card name: <b>"{{ object.name }}"</b><br>
+    Book name: <b>"{{ object.name }}"</b><br>
+    Description: <b>"{{ object.description }}"</b><br>
     <br>
     <td><a href="{% url 'product_card:pc_create' %}" class="btn btn-outline-success mb-3">Create a new book</a></td>
-    <br>
-    <td><a href="{% url 'product_card:pc_list' %}" class="btn btn-outline-success mb-3">Show the list of books</a></td>
+    <td><a href="{% url 'product_card:pc_list' %}" class="btn btn-outline-warning mb-3">Show the list of books</a></td>
 {% endblock content %}

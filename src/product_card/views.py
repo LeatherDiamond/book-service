@@ -64,6 +64,7 @@ class SearchResultView(generic.View):
             'count': paginator.count,
         })
 
+
 class BookDetail(generic.DetailView):
     def get(self, request, *args, **kwargs):
         book = get_object_or_404(models.Book, pk=kwargs['pk'])
