@@ -11,9 +11,8 @@ Author's preview
     </div>
     </div>
     Author's data: <b>"{{ object.name }} {{object.surname}}"</b><br>
-    Description: {{ object.description|default:"No description was provided" }}<br>
+    Description: <b>"{{ object.description|default:"No description was provided" }}"</b><br>
     <br>
     <td><a href="{% url 'references:author_create' %}" class="btn btn-outline-success mb-3">Create a new author</a></td>
-    <br>
-    <td><a href="{% url 'references:authors_list' %}" class="btn btn-outline-success mb-3">Show the list of authors</a></td>
+    <td><a href="{% url 'references:authors_list' %}" class="btn btn-outline-warning mb-3">Show the list of authors</a></td>
 {% endblock content %}

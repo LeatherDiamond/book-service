@@ -52,6 +52,7 @@
         <div class="card shadow-sm">
           <img src="{% if obj.image %}{{ obj.image.url }}{% else %}{% endif %}" alt="Default image" border="1" width="100%" height="500" >
           <div class="card-body">
+            <p class="card-text"><h5>{{ obj.name }}</h5></p>
             <p class="card-text">{{ obj.description }}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
