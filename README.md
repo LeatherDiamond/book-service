@@ -27,11 +27,11 @@ This project allows uers to focus on developing new features and enhancing their
 
 ***Applied technologies:*** 
 - Python(>=3.9.7), 
-- SQLite, 
 - Django(>=4.1.7), 
 - Bootstrap (>=5.0.2), 
 - Docker (docker engine >=20.10.23 ), 
-- GitHub Actions (checkout >=v2)
+- GitHub Actions (checkout >=v2),
+- SQLite, 
 
 # Detailed functionality description
    
